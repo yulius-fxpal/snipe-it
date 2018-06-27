@@ -60,6 +60,7 @@ WORKDIR /var/www/html
 #copy all configuration files
 # COPY docker/*.php /var/www/html/app/config/production/
 COPY docker/docker.env /var/www/html/.env
+RUN chmod 600 /var/www/html/.env
 
 RUN chown -R docker /var/www/html
 
